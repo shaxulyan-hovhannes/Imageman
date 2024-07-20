@@ -14,10 +14,14 @@ module.exports = (env, argv) => {
       filename: "bundle.[contenthash].js",
     },
     resolve: {
-      extensions: [".ts", ".js"],
+      extensions: [".ts", "tsx", ".js"],
     },
     module: {
       rules: [
+        {
+          test: /\.html$/,
+          use: "html-loader",
+        },
         {
           test: /\.tsx?$/,
           use: "ts-loader",

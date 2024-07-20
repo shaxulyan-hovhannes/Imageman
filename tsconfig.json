@@ -9,5 +9,5 @@
     "forceConsistentCasingInFileNames": true,
     "noImplicitAny": true
   },
-  "include": ["src/**/*"]
+  "include": ["src/**/*", "src/custom.d.ts"]
 }
