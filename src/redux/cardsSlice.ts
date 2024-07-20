@@ -9,15 +9,16 @@ const initialState: CardsState = {
   cards: [
     {
       id: "e95d6a99-70e4-49f8-91e0-03297e140eee",
-      title: "TItle",
+      title: "Lorem Ipsum is dolor",
       created_at: new Date().toLocaleDateString(),
-      description: "fdsjfkldshjflkj",
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqGK3diR3Zi-mnOXEaj-3ewmFyRYVxGzVzZw&s",
     },
     {
       id: "35e68b56-f6fb-4635-8c76-0c05a272a261",
-      title: "TItle2",
+      title: "Lorem Ipsum is dolor",
       created_at: new Date().toLocaleDateString(),
       description: "fdsjfkldshjflkj sjkfhdsjkh",
       image:
