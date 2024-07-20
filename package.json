@@ -2,10 +2,9 @@
   "name": "imageman",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
-    "start": "webpack serve --mode development --open"
+    "start": "webpack serve --mode development"
   },
   "author": "",
   "license": "ISC",
