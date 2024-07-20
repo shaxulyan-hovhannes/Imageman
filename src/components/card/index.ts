@@ -12,7 +12,10 @@ export default function createCardContainer(): HTMLElement {
   cardContainer.textContent = "CARD CONTAINER";
 
   const handleEdit = () => {};
-  const handleDelete = () => {};
+  //   const handleDelete = () => {
+  //     store.dispatch(deleteCard(id));
+  //     renderCards();
+  //   };
 
   function renderCards() {
     cardContainer.innerHTML = "";
@@ -28,6 +31,11 @@ export default function createCardContainer(): HTMLElement {
     // addCardElement.textContent = "+";
     // addCardElement.addEventListener("click", () => openModal(null, handleAdd));
     cardContainer.appendChild(addCardElement);
+  }
+
+  function handleDelete(id: string) {
+    store.dispatch(deleteCard(id));
+    renderCards();
   }
 
   renderCards();

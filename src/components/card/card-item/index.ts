@@ -26,8 +26,13 @@ export function createCardElement(
   cardElement.appendChild(editButton);
 
   const deleteButton = document.createElement("button");
+  deleteButton.className = "card-item-delete-button";
   deleteButton.textContent = "X";
-  deleteButton.addEventListener("click", () => onDelete(card.id));
+
+  deleteButton.addEventListener("click", () => {
+    // alert(card.id);
+    onDelete(card.id);
+  });
   cardElement.appendChild(deleteButton);
 
   return cardElement;

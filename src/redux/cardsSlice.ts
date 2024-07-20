@@ -13,7 +13,7 @@ const initialState: CardsState = {
       created_at: new Date().toLocaleDateString(),
       description: "fdsjfkldshjflkj",
       image:
-        "https://img.freepik.com/free-photo/abstract-autumn-beauty-multi-colored-leaf-vein-pattern-generated-by-ai_188544-9871.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1721347200&semt=ais_user",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqGK3diR3Zi-mnOXEaj-3ewmFyRYVxGzVzZw&s",
     },
     {
       id: "35e68b56-f6fb-4635-8c76-0c05a272a261",
