@@ -14,7 +14,7 @@ module.exports = (env, argv) => {
       filename: "bundle.[contenthash].js",
     },
     resolve: {
-      extensions: [".ts", "tsx", ".js"],
+      extensions: [".ts", ".tsx", ".js"],
     },
     module: {
       rules: [
@@ -34,6 +34,10 @@ module.exports = (env, argv) => {
             "css-loader",
             "sass-loader",
           ],
+        },
+        {
+          test: /\.svg$/,
+          use: "file-loader",
         },
       ],
     },

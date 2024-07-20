@@ -1,5 +1,7 @@
+import "./../../assets/styles/layout.scss";
+
 import Header from "./header/header.html";
-import "./header/header.scss";
+import createCardContainer from "./../card";
 
 export default function createLayout(): HTMLElement {
   const layout = document.createElement("div");
@@ -13,9 +15,10 @@ export default function createLayout(): HTMLElement {
 
     h.textContent = "LAYOUTTTTTTTTt";
     h.className = "layout-header";
+    const CardContainer = createCardContainer();
 
-    // layout.insertAdjacentHTML("beforeend", h);
-    layout.appendChild(h);
+    // layout.insertAdjacentHTML("beforeend", CardContainer);
+    layout.appendChild(CardContainer);
   }
 
   renderLayout();
