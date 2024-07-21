@@ -1,4 +1,3 @@
-// import "./../../assets/styles/card.scss";
 import "./../../assets/styles/card/index.scss";
 
 import { Card } from "./../../types";
@@ -10,20 +9,25 @@ import store from "./../../redux/store";
 export default function createCardContainer(): HTMLElement {
   const cardContainer = document.createElement("div");
   cardContainer.className = "card-container";
-  cardContainer.textContent = "CARD CONTAINER";
 
   function renderCards() {
     cardContainer.innerHTML = "";
 
     const cards = store.getState().cards.cards;
-    cards.forEach((card) => {
+    cards.forEach((card: Card) => {
       const cardElement = createCardElement(card, handleEdit, handleDelete);
       cardContainer.appendChild(cardElement);
     });
 
     const addCardElement = document.createElement("div");
     addCardElement.className = "card-item card-item-add";
+    addCardElement.addEventListener("click", () => openModal(null, handleAdd));
     cardContainer.appendChild(addCardElement);
+  }
+
+  function handleAdd(card: Card) {
+    store.dispatch(addCard(card));
+    renderCards();
   }
 
   function handleDelete(id: string) {

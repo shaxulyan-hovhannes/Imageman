@@ -1,12 +1,14 @@
 {
   "compilerOptions": {
+    "moduleResolution": "node",
     "target": "ES6",
     "module": "commonjs",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "noImplicitAny": true
+    "noImplicitAny": true,
+    "lib": ["dom", "es2015"]
   },
   "include": ["src/**/*", "src/custom.d.ts"]
 }

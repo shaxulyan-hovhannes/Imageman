@@ -1,0 +1,71 @@
+.card-form {
+  &-item-container {
+    width: 100%;
+    margin-bottom: 20px;
+
+    & > textarea,
+    input {
+      width: 100%;
+      border: 0;
+      background-color: #e3e3e3;
+      border-radius: 15px;
+      font-size: 1rem;
+
+      &[type="file"] {
+        background-color: transparent;
+        display: none;
+      }
+    }
+
+    & > input {
+      height: 35px;
+      padding-left: 15px;
+    }
+
+    & > textarea {
+      resize: none;
+      padding: 10px 0 0 15px;
+    }
+
+    & label {
+      & > :first-child {
+        background: url("./../../icons/upload.svg") no-repeat;
+        width: 160px;
+        height: 35px;
+        background-position: center center;
+        background-size: contain;
+      }
+    }
+  }
+
+  &-submit-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & > img {
+      width: 120px;
+      height: 70px;
+      border-radius: 20px;
+    }
+
+    & button {
+      width: 70px;
+      height: 24px;
+      border: 0;
+      background: linear-gradient(90deg, #ffb763 0%, #ff5757 100%);
+      color: white;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 0.625rem;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  }
+
+  &-field-label {
+    color: #6b6b6b;
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+}

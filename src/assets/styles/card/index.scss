@@ -15,6 +15,7 @@
     gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
+    padding: 40px 22% 0;
   }
 
   &-item {
@@ -130,7 +131,7 @@
       width: 70px;
       height: 24px;
       border: 0;
-      background-color: #f8af6c;
+      background: linear-gradient(90deg, #ffb763 0%, #ff5757 100%);
       color: white;
       text-transform: uppercase;
       font-weight: 500;
