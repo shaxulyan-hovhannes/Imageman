@@ -35,10 +35,21 @@ export function createCardElement(
 
   const description = document.createElement("p");
   description.className = "card-item-info-section-description";
+  description.title = card.description;
   description.textContent = card.description;
   infoSection.appendChild(description);
 
+  const createdAt = document.createElement("div");
+  createdAt.className = "card-item-info-section-date";
+  const dateIcon = document.createElement("div");
+  createdAt.appendChild(dateIcon);
+  const dateInfo = document.createElement("p");
+  dateInfo.textContent = card.created_at;
+  createdAt.appendChild(dateInfo);
+  infoSection.appendChild(createdAt);
+
   const editButton = document.createElement("button");
+  editButton.className = "card-item-edit-button";
   editButton.textContent = "Edit";
   editButton.addEventListener("click", () => onEdit(card));
   cardContent.appendChild(editButton);

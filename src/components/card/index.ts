@@ -1,8 +1,9 @@
-import "./../../assets/styles/card.scss";
+// import "./../../assets/styles/card.scss";
+import "./../../assets/styles/card/index.scss";
 
 import { Card } from "./../../types";
 import { createCardElement } from "./card-item";
-// import { openModal } from "./CardModal";
+import openModal from "./card-modal";
 import { addCard, editCard, deleteCard } from "./../../redux/cardsSlice";
 import store from "./../../redux/store";
 
@@ -10,12 +11,6 @@ export default function createCardContainer(): HTMLElement {
   const cardContainer = document.createElement("div");
   cardContainer.className = "card-container";
   cardContainer.textContent = "CARD CONTAINER";
-
-  const handleEdit = () => {};
-  //   const handleDelete = () => {
-  //     store.dispatch(deleteCard(id));
-  //     renderCards();
-  //   };
 
   function renderCards() {
     cardContainer.innerHTML = "";
@@ -28,14 +23,19 @@ export default function createCardContainer(): HTMLElement {
 
     const addCardElement = document.createElement("div");
     addCardElement.className = "card-item card-item-add";
-    // addCardElement.textContent = "+";
-    // addCardElement.addEventListener("click", () => openModal(null, handleAdd));
     cardContainer.appendChild(addCardElement);
   }
 
   function handleDelete(id: string) {
     store.dispatch(deleteCard(id));
     renderCards();
+  }
+
+  function handleEdit(card: Card) {
+    openModal(card, (updatedCard) => {
+      store.dispatch(editCard(updatedCard));
+      renderCards();
+    });
   }
 
   renderCards();

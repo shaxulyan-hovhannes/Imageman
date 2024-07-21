@@ -10,7 +10,7 @@ const initialState: CardsState = {
     {
       id: "e95d6a99-70e4-49f8-91e0-03297e140eee",
       title: "Lorem Ipsum is dolor",
-      created_at: new Date().toLocaleDateString(),
+      created_at: "12.05.2021",
       description:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
       image:
@@ -19,7 +19,7 @@ const initialState: CardsState = {
     {
       id: "35e68b56-f6fb-4635-8c76-0c05a272a261",
       title: "Lorem Ipsum is dolor",
-      created_at: new Date().toLocaleDateString(),
+      created_at: "12.05.2021",
       description: "fdsjfkldshjflkj sjkfhdsjkh",
       image:
         "https://img.freepik.com/free-photo/abstract-autumn-beauty-multi-colored-leaf-vein-pattern-generated-by-ai_188544-9871.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1721347200&semt=ais_user",
