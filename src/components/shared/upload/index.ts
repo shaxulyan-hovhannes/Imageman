@@ -1,11 +1,11 @@
 export default function createUploadFileInput({
-  id = "",
+  id = '',
 }: {
   id?: string;
 }): HTMLInputElement {
-  const uploadInput = document.createElement("input");
+  const uploadInput = document.createElement('input');
   uploadInput.id = id;
-  uploadInput.type = "file";
+  uploadInput.type = 'file';
 
   return uploadInput;
 }

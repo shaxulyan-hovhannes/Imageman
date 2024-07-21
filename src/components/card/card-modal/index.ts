@@ -1,17 +1,17 @@
-import "./../../../assets/styles/card/card-modal.scss";
+import './../../../assets/styles/card/card-modal.scss';
 
-import { Card } from "./../../../types";
-import createCardForm from "../card-form";
+import { Card } from './../../../types';
+import createCardForm from '../card-form';
 
-import { MODAL_BACKDROP_CLASSNAME } from "../../../constants/common";
+import { MODAL_BACKDROP_CLASSNAME } from '../../../constants/common';
 
 export default function openModal(
   card: Card | null,
-  onSave: (card: Card) => void
+  onSave: (card: Card) => void,
 ): void {
-  const modal = document.createElement("div");
+  const modal = document.createElement('div');
   modal.className = MODAL_BACKDROP_CLASSNAME;
-  modal.addEventListener("click", (e: Event) => {
+  modal.addEventListener('click', (e: Event) => {
     if (
       e.target instanceof HTMLElement &&
       e.target.classList.contains(MODAL_BACKDROP_CLASSNAME)
@@ -20,8 +20,8 @@ export default function openModal(
     }
   });
 
-  const dialog = document.createElement("div");
-  dialog.className = "card-modal-dialog";
+  const dialog = document.createElement('div');
+  dialog.className = 'card-modal-dialog';
 
   const cardForm = createCardForm(card, onSave);
 

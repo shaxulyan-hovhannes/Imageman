@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "build": "webpack --mode production",
-    "start": "webpack serve --mode development --open"
+    "start": "npm run format && webpack serve --mode development --open",
+    "format": "prettier --write \"src/**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|graphql|mdx)\""
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +20,7 @@
     "html-loader": "^5.0.0",
     "html-webpack-plugin": "^5.3.2",
     "mini-css-extract-plugin": "^2.9.0",
+    "prettier": "^3.3.2",
     "redux": "^4.1.0",
     "redux-thunk": "^2.3.0",
     "sass": "^1.77.8",

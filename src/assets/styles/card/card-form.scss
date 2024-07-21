@@ -11,7 +11,7 @@
       border-radius: 15px;
       font-size: 1rem;
 
-      &[type="file"] {
+      &[type='file'] {
         background-color: transparent;
         display: none;
       }
@@ -29,7 +29,7 @@
 
     & label {
       & > :first-child {
-        background: url("./../../icons/upload.svg") no-repeat;
+        background: url('./../../icons/upload.svg') no-repeat;
         width: 160px;
         height: 35px;
         background-position: center center;

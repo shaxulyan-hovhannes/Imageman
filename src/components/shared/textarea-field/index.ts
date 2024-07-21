@@ -1,11 +1,11 @@
 export default function createTextareaField({
-  name = "",
+  name = '',
   rows = 1,
 }: {
   name: string;
   rows?: number;
 }): HTMLTextAreaElement {
-  const textareaField = document.createElement("textarea");
+  const textareaField = document.createElement('textarea');
   textareaField.name = name;
   textareaField.rows = rows;
 
